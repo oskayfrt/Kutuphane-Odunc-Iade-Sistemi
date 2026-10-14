@@ -1,0 +1,41 @@
+# Java ve Maven çıktıları
+target/
+.maven-cache/
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+replay_pid*
+*.log
+
+# NetBeans kişisel ayarları ve çıktıları
+nbproject/private/
+nbactions-*.xml
+nb-configuration.xml
+build/
+dist/
+.nb-gradle/
+
+# Diğer IDE kişisel ayarları
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# Yerel yapılandırma ve kullanıcı verileri
+.env
+.env.*
+*.local.properties
+config/local/
+data/
+
+# İşletim sistemi ve geçici dosyalar
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+*.bak
+*~
