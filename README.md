@@ -28,10 +28,18 @@ Ana pencere ve menü geçişleri çalışır. Modeller Java 17 `record` türleri
 alanlara `id()`, `title()` gibi erişilir. Modeller değişmezdir; güncelleme yeni
 kayıt oluşturularak yapılacaktır. `Loan.returnedDate()` iade öncesinde null olabilir.
 
-Veri yapılarında yalnızca depolama alanları, boş durum ve boyut sorguları hazırdır.
-Ekleme/silme gibi henüz geliştirilmeyen işlemler API'ye eklenmemiştir. Servislerde
-başlangıç kayıt sayısı sıfırdır. Arama, sıralama, kayıt/yükleme ve iş kuralları TODO
-olarak bırakılmıştır; kitap/üye işlemleri ve kalıcı veri kaydı henüz sunulmaz.
+Fırat Oskay'ın kitap modülü: özel DynamicArray, kitap ekleme/silme/güncelleme,
+ad/yazar/ISBN ile kısmi arama, toplam/mevcut stok ve BookPanel ekranı hazırdır.
+`Modüller > Kitap Yönetimi` ile açılır. Başlangıçta kayıt yoktur; veriler bellektedir
+ve uygulama kapanınca silinir. ISBN ayraçları temizlenir; uzunluk/karakter denetimi
+vardır, ISBN sağlama hanesi doğrulanmaz.
+
+Diğer veri yapıları, üye/ödünç ekranları, ortak arama/sıralama ve dosya kayıt/yükleme
+ekip üyelerinin geliştireceği iskeletlerdir. Kitap servisindeki stok API'si ödünç/iade
+entegrasyonuna hazırdır; henüz LoanService'e bağlanmamıştır.
+
+Fırat'ın sprint raporu ve servis sözleşmesi: [Kitap modülü](docs/firat-oskay/README.md).
+Otomatik testler `mvn clean test`, çalıştırılabilir JAR `mvn clean verify` ile üretilir.
 
 ## Paket yapısı
 
@@ -47,14 +55,14 @@ src/main/java/tr/edu/kutuphane/
 ├── service/        BookService.java, MemberService.java, LoanService.java
 ├── algorithms/     SearchAlgorithms.java, SortAlgorithms.java
 ├── storage/        FileStorage.java
-└── ui/             MainFrame.java
+└── ui/             MainFrame.java, BookPanel.java
 ```
 
 ## Dört kişilik görev dağılımı
 
 | Üye | Sorumluluk |
 | --- | --- |
-| 1. kişi | Kitap yönetimi, BookService, kitap paneli, DynamicArray |
+| Fırat Oskay | Kitap yönetimi, BookService, BookPanel, DynamicArray |
 | 2. kişi | Üye yönetimi, MemberService, üye paneli, HashTableCustom |
 | 3. kişi | Ödünç/iade, LoanService, işlem paneli, LinkedListCustom |
 | 4. kişi | MainFrame, QueueCustom, StackCustom, arama/sıralama, FileStorage, entegrasyon |
