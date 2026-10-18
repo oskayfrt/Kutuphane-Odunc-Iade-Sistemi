@@ -29,7 +29,7 @@ public class MainFrame extends JFrame {
         setLocationRelativeTo(null);
         content.setBorder(BorderFactory.createEmptyBorder(24, 24, 24, 24));
         addModule("Ana Sayfa", "Kütüphane sistemine hoş geldiniz. Modüller menüsünden bir bölüm seçin.");
-        addModule("Kitap Yönetimi", "Kitap modülü geliştirilecek. Kayıtlı kitap: " + bookService.count());
+        content.add(new BookPanel(bookService), "Kitap Yönetimi");
         addModule("Üye Yönetimi", "Üye modülü geliştirilecek. Kayıtlı üye: " + memberService.count());
         addModule("Ödünç / İade", "İşlem modülü geliştirilecek. Kayıtlı ödünç: " + loanService.count());
         addModule("Bekleme Kuyruğu", "Bekleme kuyruğu modülü geliştirilecek.");
