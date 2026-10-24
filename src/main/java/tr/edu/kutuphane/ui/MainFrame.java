@@ -30,7 +30,7 @@ public class MainFrame extends JFrame {
         content.setBorder(BorderFactory.createEmptyBorder(24, 24, 24, 24));
         addModule("Ana Sayfa", "Kütüphane sistemine hoş geldiniz. Modüller menüsünden bir bölüm seçin.");
         content.add(new BookPanel(bookService), "Kitap Yönetimi");
-        addModule("Üye Yönetimi", "Üye modülü geliştirilecek. Kayıtlı üye: " + memberService.count());
+        content.add(new MemberPanel(memberService, loanService), "Üye Yönetimi");
         content.add(new LoanPanel(loanService), "Ödünç / İade");
         addModule("Bekleme Kuyruğu", "Bekleme kuyruğu modülü geliştirilecek.");
         addModule("Kayıt / Yükleme", "Dosya kayıt ve yükleme modülü geliştirilecek.");
