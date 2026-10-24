@@ -24,8 +24,8 @@ Bu sprintte geliştirilen `StackCustom<T>` sınıfı, ilerleyen entegrasyon aşa
 
 | Dosya | Açıklama |
 |---|---|
-| `src/main/java/tr/edu/kutuphane/datastructures/StackCustom.java` | Generic yığın veri yapısı |
-| `src/test/java/tr/edu/kutuphane/datastructures/StackCustomTest.java` | JUnit 5 birim testleri |
+| `../../../src/main/java/tr/edu/kutuphane/datastructures/StackCustom.java` | Generic yığın veri yapısı |
+| `../../../src/test/java/tr/edu/kutuphane/datastructures/StackCustomTest.java` | JUnit 5 birim testleri |
 | `docs/sprint-00-03/README.md` | Sprint dokümantasyonu |
 
 ## 4. Kullanılan Veri Yapısı
